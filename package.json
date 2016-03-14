@@ -35,14 +35,16 @@
     "wrench": "*",
     "groundskeeper": "*",
     "sync-exec": "*",
-    "http-sync-4": "*",
-    "http-sync": "*",
     "extend": "*"
   },
- "devDependencies": {
+  "optionalDependencies": {
+    "http-sync-4": "*",
+    "http-sync": "*"
+  },
+  "devDependencies": {
     "grunt-contrib-clean": "~0.5.0",
     "grunt": "~0.4.5"
-  },  
+  },
   "peerDependencies": {
     "grunt": "~0.4.5"
   },
