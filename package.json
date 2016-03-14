@@ -36,6 +36,7 @@
     "groundskeeper": "*",
     "sync-exec": "*",
     "http-sync-4": "*",
+    "http-sync": "*",
     "extend": "*"
   },
  "devDependencies": {

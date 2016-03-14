@@ -18,7 +18,8 @@ var AdmZip = require('adm-zip');
 var path = require('path');
 var colors = require('colors');
 var syncExec = require('sync-exec');
-var httpSync = require('http-sync-4');
+var majorVersion = + process.version.match(/^v([0-9]+)/)[1];
+var httpSync = require(majorVersion >= 4 ? 'http-sync-4' : 'http-sync');
 
 var logLevel = 0;
 var _log = function (str, level) {
