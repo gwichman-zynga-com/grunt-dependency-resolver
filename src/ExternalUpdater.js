@@ -124,7 +124,7 @@ function _updateGitRepo(branch, uri, dest, name, externalFolder, silent) {
 	var destination = path.join(externalFolder, dest) + '/';
 
 	var stdout = syncExec(arg).stdout;
-	var status = stdout.stdout.split('\n')[2];
+	var status = stdout.split('\n')[2];
 
 	if(!silent)
 		grunt.log.writeln(' => ' + (status.indexOf('Already up') > -1 ? status.yellow : status.green));
