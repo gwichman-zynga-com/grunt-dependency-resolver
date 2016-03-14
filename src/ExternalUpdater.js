@@ -17,8 +17,8 @@ var exec = require('child_process').exec;
 var AdmZip = require('adm-zip');
 var path = require('path');
 var colors = require('colors');
-var sh = require('execSync');
-var httpSync = require('http-sync');
+var sh = require('sync-exec');
+var httpSync = require('http-sync-4');
 
 var logLevel = 0;
 var _log = function (str, level) {

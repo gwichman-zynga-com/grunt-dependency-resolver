@@ -34,16 +34,16 @@
     "colors": "*",
     "wrench": "*",
     "groundskeeper": "*",
-    "execSync": "*",
-    "http-sync": "*",
+    "sync-exec": "*",
+    "http-sync-4": "*",
     "extend": "*"
   },
  "devDependencies": {
     "grunt-contrib-clean": "~0.5.0",
-    "grunt": "~0.4.1"
+    "grunt": "~0.4.5"
   },  
   "peerDependencies": {
-    "grunt": "~0.4.1"
+    "grunt": "~0.4.5"
   },
   "keywords": [
     "gruntplugin"
