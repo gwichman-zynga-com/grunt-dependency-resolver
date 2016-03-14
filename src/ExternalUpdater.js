@@ -123,7 +123,7 @@ function _updateGitRepo(branch, uri, dest, name, externalFolder, silent) {
 	var tmp = '.s5grunt/' + dest;
 	var destination = path.join(externalFolder, dest) + '/';
 
-	var stdout = syncExec(arg);
+	var stdout = syncExec(arg).stdout;
 	var status = stdout.stdout.split('\n')[2];
 
 	if(!silent)
@@ -155,7 +155,7 @@ function _checkoutGitRepo(branch, uri, dest, name, externalFolder, silent) {
 	arg += toBranch;
 
 	if (toBranch !== branch) {
-		var stdout = syncExec(arg);
+		var stdout = syncExec(arg).stdout;
 		_updateGitRepo(toBranch, uri, dest, name, externalFolder, silent);
 	} else {
 		_updateGitRepo(branch, uri, dest, name, externalFolder, silent);
@@ -186,7 +186,7 @@ function downloadGitRepo(uri, dest, name, externalFolder) {
 		arg += 'clone ' + theUrl + ' ' + destination;
 		// execute the command
 
-		var output = syncExec(arg);
+		var output = syncExec(arg).stdout;
 		grunt.log.write(' => ' + output.stdout.green);
 		process.chdir(cwd + '/' + destination);
 		_checkoutGitRepo('master', uri, dest, name, externalFolder, 1);
