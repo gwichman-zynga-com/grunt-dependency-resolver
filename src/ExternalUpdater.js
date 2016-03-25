@@ -189,7 +189,8 @@ function downloadGitRepo(uri, dest, name, externalFolder) {
 		// execute the command
 
 		var output = syncExec(arg).stdout;
-		grunt.log.write(' => ' + output.stdout.green);
+		output = output || "(cloned)\n";
+		grunt.log.write(' => ' + output.green);
 		process.chdir(cwd + '/' + destination);
 		_checkoutGitRepo('master', uri, dest, name, externalFolder, 1);
 
